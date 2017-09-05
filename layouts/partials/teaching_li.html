@@ -1,0 +1,15 @@
+<li itemscope itemtype="http://schema.org/CreativeWork">
+	<i class="fa-li fa fa-university pub-icon" aria-hidden="true"></i>
+	<p class="course-title">
+	{{ if not .Params.external_link }}
+		<a href="{{ .Permalink }}">{{ .Title }}</a>
+	{{ else }}
+		{{ with .Params.external_link }}<a href="{{ . }}" target="_blank">{{end}} {{ .Title }}</a>
+	{{ end }}
+	</p>
+	<ul class="ul-course-desc fa-ul">
+		<li itemscope itemtype="http://schema.org/CreativeWork">{{ with .Params.description }}{{ . | markdownify }}{{ end }}</li>
+		<li itemscope itemtype="http://schema.org/CreativeWork">{{ with .Params.department  }}{{ . | markdownify }}{{ end }}</li>
+		<li itemscope itemtype="http://schema.org/CreativeWork">{{ with .Params.institution }}{{ . | markdownify }}{{ end }}</li>
+	</ul>
+</li>

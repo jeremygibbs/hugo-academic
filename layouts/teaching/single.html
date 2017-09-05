@@ -1,0 +1,151 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+	{{ if .Params.header.image }}
+	<div class="article-header">
+		<img src="{{ "/img/" | relURL }}/{{ .Params.header.image }}" class="article-banner" itemprop="image">
+		{{ with .Params.header.caption }}<span class="article-header-caption">{{ . | markdownify | emojify }}</span>{{ end }}
+	</div>
+	{{end}}
+	
+	<div class="container course-title">
+		<h1 itemprop="name">{{ .Title }}</h1>
+	</div>
+</div>
+
+<div class="article-container">
+		
+		{{ if isset .Params "course_docs" }}
+		<h3 itemprop="name">Course Resources</h3>
+		<ul class="fa-ul">
+			{{ range .Params.course_docs }}
+			<li itemscope itemtype="http://schema.org/CreativeWork">
+				<i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+				<p class="document-title"><a href="{{ .path }}">{{ .name }}</a></p>
+			{{ end }}
+			</li>
+		</ul>
+		{{ end }}
+		
+		{{ if isset .Params "lectures" }}
+		<h3 itemprop="name">Lectures</h3>
+		<ul class="fa-ul">
+			{{ range .Params.lectures }}
+			<li itemscope itemtype="http://schema.org/CreativeWork">
+				<i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+				<p class="lecture-title"><a href="{{ .path }}">{{ .name }}</a></p>
+				<ul class="fa-ul">
+    				{{ range .handouts}}
+					<li itemscope itemtype="http://schema.org/CreativeWork">
+					    <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+                        <p class="handout-title"><a href="{{ index . 1 }}">{{ index . 0 }}</a></p>
+                    </li>
+                    {{ end }}
+				</ul>
+			{{ end }}
+			</li>
+		</ul>
+		{{ end }}
+		
+		{{ if isset .Params "homework" }}
+		<h3 itemprop="name">Homework</h3>
+		<ul class="fa-ul">
+			{{ range .Params.homework }}
+			<li itemscope itemtype="http://schema.org/CreativeWork">
+				<i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+				<p class="lecture-title"><a href="{{ .path }}">{{ .name }}</a></p>
+				<ul class="fa-ul">
+    				{{ range .handouts}}
+					<li itemscope itemtype="http://schema.org/CreativeWork">
+					    <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+                        <p class="handout-title"><a href="{{ index . 1 }}">{{ index . 0 }}</a></p>
+                    </li>
+                    {{ end }}
+				</ul>
+			{{ end }}
+			</li>
+		</ul>
+		{{ end }}
+		
+		{{ if isset .Params "labs" }}
+		<h3 itemprop="name">Labs</h3>
+		<ul class="fa-ul">
+			{{ range .Params.labs }}
+			<li itemscope itemtype="http://schema.org/CreativeWork">
+				<i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+				<p class="lab-title"><a href="{{ .path }}">{{ .name }}</a></p>
+				<ul class="fa-ul">
+    				{{ range .handouts}}
+					<li itemscope itemtype="http://schema.org/CreativeWork">
+					    <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+                        <p class="handout-title"><a href="{{ index . 1 }}">{{ index . 0 }}</a></p>
+                    </li>
+                    {{ end }}
+				</ul>
+			{{ end }}
+			</li>
+		</ul>
+		{{ end }}
+		
+		{{ if isset .Params "projects" }}
+		<h3 itemprop="name">Projects</h3>
+		<ul class="fa-ul">
+			{{ range .Params.projects }}
+			<li itemscope itemtype="http://schema.org/CreativeWork">
+				<i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+				<p class="lecture-title"><a href="{{ .path }}">{{ .name }}</a></p>
+				<ul class="fa-ul">
+    				{{ range .handouts}}
+					<li itemscope itemtype="http://schema.org/CreativeWork">
+					    <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+                        <p class="handout-title"><a href="{{ index . 1 }}">{{ index . 0 }}</a></p>
+                    </li>
+                    {{ end }}
+				</ul>
+			{{ end }}
+			</li>
+		</ul>
+		{{ end }}
+		
+		{{ if isset .Params "exams" }}
+		<h3 itemprop="name">Exams</h3>
+		<ul class="fa-ul">
+			{{ range .Params.exams }}
+			<li itemscope itemtype="http://schema.org/CreativeWork">
+				<i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+				<p class="lecture-title"><a href="{{ .path }}">{{ .name }}</a></p>
+				<ul class="fa-ul">
+    				{{ range .handouts}}
+					<li itemscope itemtype="http://schema.org/CreativeWork">
+					    <i class="fa-li fa fa-file-text-o pub-icon" aria-hidden="true"></i>
+                        <p class="handout-title"><a href="{{ index . 1 }}">{{ index . 0 }}</a></p>
+                    </li>
+                    {{ end }}
+				</ul>
+			{{ end }}
+			</li>
+		</ul>
+		{{ end }}
+		
+		{{ if isset .Params "links" }}
+		<h3 itemprop="name">Useful Links</h3>
+		<ul class="fa-ul">
+			{{ range .Params.links }}
+			<li itemscope itemtype="http://schema.org/CreativeWork">
+				<i class="fa-li fa fa-external-link pub-icon" aria-hidden="true"></i>
+				<p class="document-title"><a href="{{ .path }}">{{ .name }}</a></p>
+			{{ end }}
+			</li>
+		</ul>
+		{{ end }}
+	<div class="col-sm-1"></div>
+	<div class="visible-xs space-below"></div>
+	<div class="space-below"></div>
+	<div class="article-style">{{ .Content }}</div>
+
+</div>
+
+<div class="container">{{ partial "section_pager.html" . }}</div>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}
