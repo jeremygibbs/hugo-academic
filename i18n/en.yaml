@@ -11,6 +11,12 @@
 - id: btn_pdf
   translation: PDF
 
+- id: btn_website
+  translation: Website
+
+- id: btn_copyright
+  translation: Copyright
+
 - id: btn_slides
   translation: Slides
 

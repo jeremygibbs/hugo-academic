@@ -36,11 +36,13 @@ selected = false
 
 # Links (optional)
 url_pdf = ""
+url_web = ""
 url_code = ""
 url_dataset = ""
 url_project = ""
 url_slides = ""
 url_video = ""
+url_copyright = ""
 
 # Optional featured image (relative to `static/img/` folder).
 [header]

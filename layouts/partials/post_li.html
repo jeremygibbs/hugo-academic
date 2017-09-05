@@ -14,11 +14,7 @@
   {{ partial "article_metadata" (dict "content" $post "is_list" 1) }}
   <div class="article-style" itemprop="articleBody">
     {{ if $post.Params.summary }}
-    <p>{{ printf "%s" $post.Params.summary | markdownify }}</p>
-    {{ else if $post.Truncated }}
-    {{ $post.Summary }}
-    {{ else }}
-    {{ $post.Content }}
+        {{ $post.Params.summary | markdownify }}
     {{ end }}
   </div>
   <p class="read-more">

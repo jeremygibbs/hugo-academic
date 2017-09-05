@@ -24,8 +24,9 @@
   {{end}}
 
   <h3>{{ i18n "abstract" }}</h3>
-  <p class="pub-abstract" itemprop="text">{{ .Params.abstract }}</p>
+  <p class="pub-abstract" itemprop="text">{{ .Params.abstract | markdownify}}</p>
 
+<!--
   {{ if (.Params.publication_types) and (ne (index .Params.publication_types 0) "0") }}
   <div class="row">
     <div class="col-sm-1"></div>
@@ -45,6 +46,7 @@
   </div>
   <div class="visible-xs space-below"></div>
   {{ end }}
+-->
 
   <div class="row">
     <div class="col-sm-1"></div>
@@ -91,8 +93,6 @@
   <div class="space-below"></div>
 
   <div class="article-style">{{ .Content }}</div>
-
-</div>
 
 <div class="container">
   {{ partial "section_pager.html" . }}
