@@ -16,8 +16,8 @@
 
 # Buttons
 
-- id: btn_details
-  translation: Details
+- id: btn_preprint
+  translation: Preprint
 
 - id: btn_pdf
   translation: PDF
@@ -27,6 +27,9 @@
 
 - id: btn_copyright
   translation: Copyright
+
+- id: btn_cite
+  translation: Cite
 
 - id: btn_slides
   translation: Slides
@@ -42,6 +45,18 @@
 
 - id: btn_project
   translation: Project
+
+- id: btn_poster
+  translation: Poster
+
+- id: btn_source
+  translation: Source Document
+
+- id: btn_copy
+  translation: Copy
+
+- id: btn_download
+  translation: Download
 
 # About widget
 

@@ -5,6 +5,7 @@ theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
 paginate = 10
 
 # Enable comments by entering your Disqus shortname
@@ -20,8 +21,12 @@ defaultContentLanguageInSubdir = false
 [outputs]
   home = [ "HTML", "CSS" ]
 
+# Configure BlackFriday Markdown rendering.
+#   See: https://gohugo.io/readfiles/bfconfig/
 [blackfriday]
-  hrefTargetBlank = true
+  hrefTargetBlank = true  # `true` opens external links in a new tab.
+  fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
+  smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
 
 [params]
   # Color theme.
@@ -52,12 +57,30 @@ defaultContentLanguageInSubdir = false
   # Enable Keybase in Contact section by entering your keybase.io username.
   keybase = ""
 
+  # Diplay a logo in navigation bar rather than title (optional).
+  #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
+  logo = ""
+
+  # Enable Google Maps by entering your API key, latitude, and longitude.
+  #   Get your API key: https://developers.google.com/maps/documentation/javascript/get-api-key
+  #   Get your coords: Right-click place on Google Maps. Select 'What's here?'. At the bottom is a card with the coords.
+  #   Disable Google Maps by clearing all three options to "".
+  google_maps_api_key = ""
+  latitude = "37.4275"
+  longitude = "-122.1697"
+
   # Date format (refer to Go's date format: http://flippinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
   date_format = "Jan 2, 2006"
 
   # Show estimated reading time for posts?
   reading_time = true
+
+  # Display comment count? Requires commenting to be enabled.
+  comment_count = true
+
+  # Display section pager for posts?
+  section_pager = false
 
   # Enable global LaTeX math rendering?
   #   If false, you can enable it locally on a per page basis.
