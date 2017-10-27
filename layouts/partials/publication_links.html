@@ -11,6 +11,15 @@
   {{ i18n "btn_pdf" }}
 </a>
 {{ end }}
+{{/* TODO: After Hugo v0.30 released, use fileExists function here. */}}
+{{ $directory := "static/files/citations/" }}
+{{ $filename := printf "%s.bib" $.File.TranslationBaseName }}
+{{ if (where (readDir $directory) "Name" $filename) }}
+<button type="button" class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}} js-cite-modal"
+        data-filename="{{ printf "files/citations/%s.bib" $.File.TranslationBaseName | relURL }}">
+  {{ i18n "btn_cite" }}
+</button>
+{{ end }}
 {{ with $.Params.url_web }}
 <a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ . | absURL }}">
   {{ i18n "btn_website" }}
@@ -30,14 +39,6 @@
 <a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ . | absURL }}">
   {{ i18n "btn_video" }}
 </a>
-{{/* TODO: After Hugo v0.30 released, use fileExists function here. */}}
-{{ $directory := "static/files/citations/" }}
-{{ $filename := printf "%s.bib" $.File.TranslationBaseName }}
-{{ if (where (readDir $directory) "Name" $filename) }}
-<button type="button" class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}} js-cite-modal"
-        data-filename="{{ printf "files/citations/%s.bib" $.File.TranslationBaseName | relURL }}">
-  {{ i18n "btn_cite" }}
-</button>
 {{ end }}
 {{ with $.Params.url_code }}
 <a class="btn btn-primary btn-outline{{ if $is_list }} btn-xs{{end}}" href="{{ . | absURL }}" target="_blank" rel="noopener">
