@@ -25,19 +25,19 @@ publication_short = ""
 abstract = ""
 abstract_short = ""
 
-# Does this page contain LaTeX math? (true/false)
-math = false
-
-# Does this page require source code highlighting? (true/false)
-highlight = true
-
 # Featured image thumbnail (optional)
 image_preview = ""
 
 # Is this a selected publication? (true/false)
 selected = false
 
-# Links (optional)
+# Projects (optional).
+#   Associate this publication with one or more of your projects.
+#   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
+#   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
+projects = []
+
+# Links (optional).
 url_pdf = ""
 url_web = ""
 url_preprint = ""
@@ -52,6 +52,16 @@ url_copyright = ""
 url_poster = ""
 url_source = ""
 >>>>>>> 41d0123b54727498c65891747965b39fb48baa85
+
+# Custom links (optional).
+#   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
+# url_custom = [{name = "Custom Link", url = "http://example.org"}]
+
+# Does this page contain LaTeX math? (true/false)
+math = false
+
+# Does this page require source code highlighting? (true/false)
+highlight = true
 
 # Featured image
 # Place your image in the `static/img/` folder and reference its filename below, e.g. `image = "example.jpg"`.

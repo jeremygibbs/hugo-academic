@@ -23,7 +23,7 @@ Academic is available in different color themes and font themes.
 | --- | --- |
 | ![default theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png) | ![ocean theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png) |
 
-| `forest` | `coffee` |
+| `forest` | `coffee` + `playfair` font |
 | --- | --- |
 | ![forest theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png) | ![coffee theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png) |
 
@@ -46,7 +46,7 @@ Academic is available in different color themes and font themes.
 
 4. Start the Hugo server from your website root folder:
 
-        hugo server --watch
+        hugo server
 
     Now you can go to [localhost:1313](http://localhost:1313) and your new Academic powered website should appear.
 

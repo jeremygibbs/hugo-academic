@@ -69,9 +69,11 @@ defaultContentLanguageInSubdir = false
   latitude = "37.4275"
   longitude = "-122.1697"
 
-  # Date format (refer to Go's date format: http://flippinggodateformat.com )
+  # Date and time format (refer to Go's date format: http://fuckinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
   date_format = "Jan 2, 2006"
+  #   Examples: "3:04 pm" or "15:04"
+  time_format = "3:04 PM"
 
   # Show estimated reading time for posts?
   reading_time = true
@@ -140,6 +142,29 @@ defaultContentLanguageInSubdir = false
     'Book',  # 5
     'Book chapter'  # 6
   ]
+
+  # Configuration of talk pages.
+  [params.talks]
+    # Show talk time?
+    time = true
+
+  # Configuration of publication pages.
+  [params.publications]
+    # Date format (refer to Go's date format: http://fuckinggodateformat.com )
+    #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+    date_format = "January, 2006"
+
+  # Configuration of project pages.
+  [params.projects]
+    # List publications and talks related to the project?
+    list_children = true
+
+    # Publication list format.
+    #   0 = Simple
+    #   1 = Detailed
+    #   2 = APA
+    #   3 = MLA
+    publication_format = 3
 
   # Social/Academic Networking
   #
