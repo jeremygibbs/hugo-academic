@@ -9,7 +9,7 @@ Key features:
 - Easily manage your homepage, blog posts, publications, talks, and projects
 - Configurable widgets available for Biography, Publications, Projects, News/Blog, Talks, and Contact
 - Need a different section? Just use the Custom widget!
-- Write in [Markdown](https://sourcethemes.com/academic/post/writing-markdown-latex/) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
+- Write in [Markdown](https://sourcethemes.com/academic/docs/writing-markdown-latex/) for easy formatting and code highlighting, with [LaTeX](https://en.wikibooks.org/wiki/LaTeX/Mathematics) for mathematical expressions
 - Social/academic network linking, [Google Analytics](https://analytics.google.com), and [Disqus](https://disqus.com) comments
 - Responsive and mobile friendly
 - Simple and refreshing one page design
@@ -19,44 +19,58 @@ Key features:
 
 Academic is available in different color themes and font themes.
 
-| `default` | `ocean` |
-| --- | --- |
-| ![default theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png) | ![ocean theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png) |
+| `default` | `ocean` | `dark` |
+| --- | --- | --- |
+| ![default theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-default.png) | ![ocean theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-ocean.png) | ![dark theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png) |
 
-| `forest` | `coffee` + `playfair` font |
-| --- | --- |
-| ![forest theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png) | ![coffee theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png) |
-
-| `dark` |
-| --- |
-| ![dark theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-dark.png) |
+| `forest` | `coffee` + `playfair` font | |
+| --- | --- | --- |
+| ![forest theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-forest.png) | ![coffee theme](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-coffee-playfair.png) | ![](https://raw.githubusercontent.com/gcushen/hugo-academic/master/images/theme-spacer.png) |
 
 ## Getting Started
 
-1. [Install Hugo](https://georgecushen.com/create-your-website-with-hugo/#installing-hugo) and create a new website by typing the following commands in your *Terminal* or *Command Prompt* app:
+The following two methods describe how to install in the cloud using your web browser and how to install on your PC using the Command Prompt/Terminal app.
 
-        hugo new site my_website
-        cd my_website
+### Quick install using your web browser
 
-2. Install Academic with [git](https://help.github.com/articles/set-up-git/):
+1. [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) the [**Academic Kickstart**](https://github.com/sourcethemes/academic-kickstart) repository on GitHub
 
-        git clone https://github.com/gcushen/hugo-academic.git themes/academic
+2. [Login to Netlify using your GitHub account](https://app.netlify.com)
+    * Click *Create a new site*
+    * Follow the steps to connect to GitHub, select your new `academic-kickstart` repository, keep the default options and click *Deploy Site*
+    * Netlify will automatically provide you with a URL to access your new site
 
-    Or alternatively, [download Academic](https://github.com/gcushen/hugo-academic/archive/master.zip) and extract it into a `themes/academic` folder within your Hugo website.
+3. On GitHub, go to your `academic-kickstart` repository and edit `config.toml` to personalize your site. Shortly after saving the file, your site will automatically update
 
-3. If you are creating a new website, copy the contents of the `exampleSite` folder to your website root folder, overwriting existing files if necessary. The `exampleSite` folder contains an example config file and content to help you get started.
+4. Read the [Quick Start Guide](https://sourcethemes.com/academic/docs/) to learn how to add Markdown content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://themes.gohugo.io/theme/academic/)
 
-        cp -av themes/academic/exampleSite/* .
+### Install on your PC
 
-4. Start the Hugo server from your website root folder:
+Prerequisites:
 
-        hugo server
+* [Download and install Git](https://git-scm.com/downloads)
+* [Download and install Hugo](https://gohugo.io/getting-started/installing/#quick-install)
+
+1. Clone (or [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) or [download](https://github.com/sourcethemes/academic-kickstart/archive/master.zip)) the *Academic Kickstart* repository with Git: 
+
+       git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
+    
+    *Note that if you forked Academic Kickstart, the above command should be edited to clone your fork.*
+
+2. Initialize the theme:
+
+       cd My_Website
+       git submodule update --init --recursive
+
+3. View your new website:
+      
+       hugo server
 
     Now you can go to [localhost:1313](http://localhost:1313) and your new Academic powered website should appear.
+           
+4. Read the [Quick Start Guide](https://sourcethemes.com/academic/docs/) to learn how to add Markdown content, customize your site, and deploy it. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://themes.gohugo.io/theme/academic/)
 
-5. [Customize your website](https://sourcethemes.com/academic/post/getting-started/#getting-started) and [add your content](https://sourcethemes.com/academic/post/managing-content/) by referring to the Academic documentation
-
-6. Build your site by running the `hugo` command. Then [host it for free using Github Pages](https://georgecushen.com/create-your-website-with-hugo/). Or alternatively, copy the generated `public/` directory (by FTP, Rsync, etc.) to your production web server (such as your university's hosting service).
+5. Build your site by running the `hugo` command. Then [host it for free using Github Pages](https://georgecushen.com/create-your-website-with-hugo/) or Netlify (refer to above section). Alternatively, copy the generated `public/` directory (by FTP, Rsync, etc.) to your production web server (such as your university's hosting service).
 
 ## Updating
 
