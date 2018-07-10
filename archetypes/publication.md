@@ -33,9 +33,10 @@ selected = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
-#   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
-#   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
-projects = []
+#   Simply enter the filename of your project file in `content/project/`.
+#   E.g. `projects = ["deep-learning.md"]` references `content/project/deep-learning.md`.
+#   Otherwise, set `projects = []`.
+#projects = []
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
@@ -50,12 +51,9 @@ url_dataset = ""
 url_project = ""
 url_slides = ""
 url_video = ""
-<<<<<<< HEAD
 url_copyright = ""
-=======
 url_poster = ""
 url_source = ""
->>>>>>> 41d0123b54727498c65891747965b39fb48baa85
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
