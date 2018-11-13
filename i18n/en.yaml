@@ -81,6 +81,11 @@
 - id: education
   translation: Education
 
+# Experience widget
+
+- id: present
+  translation: Present
+
 # Publications widget
 
 - id: more_publications
@@ -99,6 +104,20 @@
 - id: more_talks
   translation: More Talks
 
+# Contact widget
+
+- id: contact_name
+  translation: Name
+
+- id: contact_email
+  translation: Email
+
+- id: contact_message
+  translation: Message
+
+- id: contact_send
+  translation: Send
+
 # Publication/Talk details
 
 - id: abstract
@@ -115,9 +134,6 @@
 
 - id: last_updated
   translation: Last updated on
-
-- id: links
-  translation: Links
 
 - id: event
   translation: Event
