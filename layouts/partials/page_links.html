@@ -114,6 +114,25 @@
   {{ i18n "btn_source" }}
 </a>
 {{ end }}
+{{ with $.Params.url_web }}
+{{ $link := . }}
+{{ if not (urls.Parse .).Scheme }}
+{{ $link = (printf "%s%s" $.Dir .) | relURL }}
+{{ end }}
+<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
+  {{ i18n "btn_website" }}
+</a>
+{{ end }}
+{{ with $.Params.url_copyright }}
+{{ $link := . }}
+{{ if not (urls.Parse .).Scheme }}
+{{ $link = (printf "%s%s" $.Dir .) | relURL }}
+{{ end }}
+<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
+  {{ i18n "btn_copyright" }}
+</a>
+{{ end }}
+
 {{ with $.Params.doi }}
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
   DOI
