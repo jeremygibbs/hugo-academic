@@ -1,6 +1,9 @@
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
+{{- define "main" -}}
+
 <div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
+	
+	{{ partial "page_header.html" . }}
+	
 	{{ if .Params.header.image }}
 	<div class="article-header">
 		<img src="{{ "/img/" | relURL }}/{{ .Params.header.image }}" class="article-banner" itemprop="image">
@@ -8,9 +11,11 @@
 	</div>
 	{{end}}
 	
+<!--
 	<div class="container course-title">
 		<h1 itemprop="name">{{ .Title }}</h1>
 	</div>
+-->
 </div>
 
 <div class="article-container">
@@ -145,7 +150,11 @@
 
 </div>
 
-<div class="container">{{ partial "section_pager.html" . }}</div>
+{{ if site.Params.section_pager }}
+<div class="article-container article-widget">
+  {{ partial "section_pager.html" . }}
+</div>
+{{ end }}
 
-{{ partial "footer_container.html" . }}
-{{ partial "footer.html" . }}
+
+{{- end -}}
