@@ -1,6 +1,6 @@
 {{ $ := .root }}
 {{ $page := .page }}
-{{ $class_len := len (where $.Data.Pages "Type" "teaching") }}
+{{ $class_len := len (where $.Site.Pages "Type" "teaching") }}
 
 <!-- Publications widget -->
 <div class="row">
@@ -20,7 +20,7 @@
     {{ with $page.Content }}<p>{{ . | markdownify }}</p>{{ end }}
     
     <ul class="ul-course fa-ul">
-      {{ range first $page.Params.count (where $.Data.Pages "Type" "teaching") }}
+      {{ range first 5 (where $.Site.Pages "Type" "teaching") }}
       {{ partial "teaching_li" . }}
       {{ end }}
     </ul>
