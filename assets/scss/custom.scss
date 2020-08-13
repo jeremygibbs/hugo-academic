@@ -1,1 +1,40 @@
 // Override this file to add your own SCSS styling.
+ul.ul-course li p.course-title {
+	margin: 20px 0px 2px 0px;
+}
+
+/*
+ul.ul-lecture {
+  margin:0px;
+  padding:0px;
+}
+*/
+
+li p.lecture-title,
+li p.document-title,
+li p.lab-title  {
+	margin: 20px 0px 2px 0px;
+}
+
+li p.handout-title {
+	margin: 5px 0px 2px 0px;
+}
+
+.container.course-title {
+  text-align:center;
+  margin-bottom: 0rem;
+}
+
+ul.ul-course-desc {
+  list-style: none;
+  margin:0px;
+  padding:0px;
+}
+
+ul.ul-course-desc li {
+  position: relative;
+  padding: 0px;
+  margin:0px;
+  font-size: 0.9rem;
+  /*color: rgba(0,0,0,0.6)*/
+}
