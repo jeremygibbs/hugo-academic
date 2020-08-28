@@ -136,7 +136,7 @@
   {{ i18n "btn_website" }}
 </a>
 {{ end }}
-{{ with $.Params.url_copyright }}
+{{ with $page.Params.url_copyright }}
 {{ $link := . }}
 {{ if not (urls.Parse .).Scheme }}
 {{ $link = (printf "%s%s" $.Dir .) | relURL }}
